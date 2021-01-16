@@ -3,7 +3,7 @@
 ![](https://img.shields.io/github/last-commit/cadupuy/swapi-front.svg?style=for-the-badge)
 ![](https://img.shields.io/github/license/cadupuy/swapi-front.svg?style=for-the-badge)
 
-[![](https://image.noelshack.com/fichiers/2021/02/6/1610806330-screely-1610806245139-min.png)]()
+[![](https://image.noelshack.com/fichiers/2021/02/6/1610812157-screely-1610812077648-min.png)]()
 
 ## Overview
 
@@ -12,6 +12,8 @@ This project is a Star Wars data browsing app in React using SWAPI API. It allow
 ## Packages
 
 - [React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [React Paginate](https://github.com/AdeleD/react-paginate)
+- [JS Cookie](https://github.com/js-cookie/js-cookie)
 - [Axios](https://github.com/axios/axios)
 
 ## Installation and usage
