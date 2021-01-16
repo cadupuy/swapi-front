@@ -1,0 +1,17 @@
+.yellowButton {
+  border: 0.1rem solid #fcee21;
+  border-radius: 2.4rem;
+  padding: 10px 20px;
+  background-color: transparent;
+  text-transform: uppercase;
+  -webkit-transition: all ease-in 0.25s;
+  -o-transition: all ease-in 0.25s;
+  transition: all ease-in 0.25s;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  font-size: 13px;
+  font-weight: lighter;
+  cursor: pointer;
+  outline: none;
+  z-index: 99;
+}

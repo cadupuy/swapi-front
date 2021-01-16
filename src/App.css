@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+/* 
+----------------------------------- 
+COMMON RULES
+----------------------------------- 
+*/
+:root {
+  /* colors */
+  --white: #fafafa;
+  --grey: #808080;
+  --green: #00fc87;
+  --darkGrey: #343434;
+  --black: #0000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/img/galaxy.jpg");
+  background-color: black;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fded22;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  background-color: black;
+  border: 1px solid rgba(0, 223, 214, 0.3);
+  bottom: 3rem;
+  display: block;
+  height: 30px;
+  left: calc(50% - 1rem);
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotateZ(45deg);
+  width: 30px;
+  z-index: 3;
+}
+
+body::after {
+  background-color: rgba(0, 223, 214, 0.3);
+  bottom: 4rem;
+  content: "";
+  display: block;
+  height: 0.1rem;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: calc(100% - 12rem);
+  z-index: 2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-family: "Russo One", sans-serif;
   color: white;
+  font-size: 35px;
+  line-height: 40.3px;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  font-family: "Russo One", sans-serif;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-family: "Dosis", sans-serif;
+}
+
+.loading {
+  width: 100vw;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -80px;
 }

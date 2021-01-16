@@ -1,0 +1,95 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+
+button svg {
+  color: white;
+  font-size: 26px;
+}
+
+main::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../assets/img/pattern.png");
+  top: 300px;
+  height: 650px;
+  left: -150px;
+  width: 650px;
+  position: absolute;
+  z-index: 0;
+}
+
+main::after {
+  content: "";
+  height: 650px;
+  right: -150px;
+  bottom: 550px;
+  width: 650px;
+  background-image: url("../../assets/img/pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
+}
+main .container > button:first-child {
+  background-color: #00dfd6;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#009bae),
+    to(#00dfd6)
+  );
+  background-image: -o-linear-gradient(left, #009bae 0%, #00dfd6 100%);
+  background-image: linear-gradient(90deg, #009bae 0%, #00dfd6 100%);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 4rem;
+  overflow: hidden;
+  padding: 1rem;
+  pointer-events: all;
+  position: absolute;
+  width: 4rem;
+  z-index: 10;
+  left: 0;
+  outline: none;
+  font-size: 24px;
+}
+
+main .container > button:last-child {
+  background-color: #00dfd6;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#009bae),
+    to(#00dfd6)
+  );
+  background-image: -o-linear-gradient(left, #009bae 0%, #00dfd6 100%);
+  background-image: linear-gradient(90deg, #009bae 0%, #00dfd6 100%);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 4rem;
+  font-size: 24px;
+
+  overflow: hidden;
+  padding: 1rem;
+  pointer-events: all;
+  position: absolute;
+  right: 0;
+  width: 4rem;
+  z-index: 10;
+  outline: none;
+}

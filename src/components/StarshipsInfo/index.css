@@ -1,0 +1,30 @@
+.manufacturer {
+  background-color: rgba(0, 223, 214, 0.15);
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 10px 0;
+
+  padding: 0.5rem 1rem;
+  font-weight: lighter;
+  font-size: 13px;
+  margin: 30px 0;
+  display: inline-block;
+}
+
+.speedInfo {
+  text-align: center;
+}
+
+.pricingInfo {
+  display: flex;
+  align-items: center;
+}
+
+.credits {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: lighter;
+  margin-right: 30px;
+}
