@@ -6,9 +6,18 @@ main {
 main .container {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 55%;
+}
+
+main .container > div:first-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
 }
 
 button svg {
@@ -41,7 +50,7 @@ main::after {
   position: absolute;
   z-index: 0;
 }
-main .container > button:first-child {
+main .container .leftButton {
   background-color: #00dfd6;
   background-image: -webkit-gradient(
     linear,
@@ -67,7 +76,7 @@ main .container > button:first-child {
   font-size: 24px;
 }
 
-main .container > button:last-child {
+main .container .rightButton {
   background-color: #00dfd6;
   background-image: -webkit-gradient(
     linear,
@@ -92,4 +101,25 @@ main .container > button:last-child {
   width: 4rem;
   z-index: 10;
   outline: none;
+}
+
+/* PAGINATION */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  color: white;
+  font-family: "Dosis", sans-serif;
+}
+
+.pagination a {
+  padding: 0 13px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.active {
+  font-weight: bold;
 }

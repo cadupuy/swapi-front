@@ -34,7 +34,7 @@ const StarshipsInfo = ({ elem }) => {
             ) : (
               <p className="credits">${elem.cost_in_credits?.slice(0, 5)}</p>
             )}
-            <button>Add to cart</button>
+            <button>Add to favorites</button>
           </div>
         </div>
 

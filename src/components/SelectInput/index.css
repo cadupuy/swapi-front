@@ -1,0 +1,52 @@
+/* 
+----------------------------------- 
+SEARCH INPUT
+----------------------------------- 
+*/
+
+.search-bar {
+  position: relative;
+  display: flex;
+}
+
+.search-bar::before {
+  background-color: rgba(0, 223, 214, 0.3);
+  content: "";
+  height: 0.1rem;
+  max-width: 15rem;
+  position: absolute;
+  top: 50%;
+  left: -270px;
+  transition: all ease-in 0.2s;
+  width: 100%;
+  z-index: 2;
+}
+
+.search-bar::after {
+  background-color: rgba(0, 223, 214, 0.3);
+  content: "";
+  height: 0.1rem;
+  right: -270px;
+  max-width: 15rem;
+  position: absolute;
+  top: 50%;
+  transition: all ease-in 0.2s;
+  width: 100%;
+  z-index: 2;
+}
+
+select {
+  color: #00dfd6;
+  font-family: "Dosis", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.02rem;
+  line-height: 1.375;
+  background: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  outline: none;
+}

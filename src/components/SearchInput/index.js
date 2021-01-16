@@ -1,26 +1,22 @@
 import React from "react";
 import "./index.css";
 
-// Components
-
-const SearchBar = ({ setChoice, choice, setId }) => {
-  const handleChange = (event) => {
-    setChoice(event.target.value);
-    setId(0);
+const SearchInput = ({ searchItem, setSearchItem }) => {
+  const handleSearch = (ev) => {
+    setSearchItem(ev.target.value);
   };
 
   return (
-    <div className="search-bar">
-      <select value={choice} onChange={handleChange}>
-        <option value="starships">starships</option>
-        <option value="vehicles">vehicles</option>
-        <option value="species">species</option>
-        <option value="films">films</option>
-        <option value="people">people</option>
-        <option value="planets">planets</option>
-      </select>
-    </div>
+    <>
+      <input
+        aria-label="search-label"
+        onChange={handleSearch}
+        type="text"
+        value={searchItem}
+        placeholder="Search in Star Wars"
+      />
+    </>
   );
 };
 
-export default SearchBar;
+export default SearchInput;

@@ -37,7 +37,7 @@ const CardContainer = ({ elem, choice }) => {
   return (
     <section className="dataInformation">
       <div>
-        {/* {elem.created && (
+        {/* {choice && (
           <img
             src={
               require(`../../assets/img/${choice}/${elem.created}.png`).default
@@ -45,6 +45,14 @@ const CardContainer = ({ elem, choice }) => {
             alt=""
           />
         )} */}
+
+        <img
+          src={
+            require(`../../assets/img/vehicles/2014-12-15T12:38:25.937000Z.png`)
+              .default
+          }
+          alt=""
+        />
       </div>
 
       <div className="cardInfo">{renderCategory()}</div>

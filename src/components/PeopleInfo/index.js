@@ -29,11 +29,6 @@ const PeopleInfo = ({ elem }) => {
           </div>
 
           <div className="pricingInfo">
-            {elem.cost_in_credits === "unknown" ? (
-              <p className="credits">Unknown</p>
-            ) : (
-              <p className="credits">{elem.cost_in_credits?.slice(0, 5)}</p>
-            )}
             <button>Add to favorites</button>
           </div>
         </div>
