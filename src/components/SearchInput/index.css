@@ -9,6 +9,8 @@
   display: flex;
   font-weight: 700;
   padding: 15px 20px;
+  width: 250px;
   text-transform: uppercase;
   outline: none;
+  z-index: 9;
 }

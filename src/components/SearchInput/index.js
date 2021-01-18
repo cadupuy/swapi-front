@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-const SearchInput = ({ searchItem, setSearchItem }) => {
+const SearchInput = ({ searchItem, setSearchItem, setPage }) => {
   const handleSearch = (ev) => {
     setSearchItem(ev.target.value);
   };
@@ -13,7 +13,7 @@ const SearchInput = ({ searchItem, setSearchItem }) => {
         onChange={handleSearch}
         type="text"
         value={searchItem}
-        placeholder="Search in Star Wars"
+        placeholder="Search in Star Wars..."
       />
     </>
   );

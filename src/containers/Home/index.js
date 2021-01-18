@@ -15,7 +15,7 @@ const Home = ({ choice, id, setId, searchItem, page, setPage }) => {
   // List of items from DB
   const [item, setItem] = useState({});
 
-  const [pageMax, setPageMax] = useState(0);
+  const [pageMax, setPageMax] = useState(1);
   // Number of results per page
   const limit = 10;
 
@@ -43,6 +43,10 @@ const Home = ({ choice, id, setId, searchItem, page, setPage }) => {
 
   useEffect(() => {
     setIsLoading(true);
+    if (searchItem !== "") {
+      setPage(1);
+    }
+
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -57,9 +61,7 @@ const Home = ({ choice, id, setId, searchItem, page, setPage }) => {
     };
 
     fetchData();
-  }, [choice, searchItem, page]);
-
-  console.log(item);
+  }, [choice, searchItem, page, setPage]);
 
   return isLoading ? (
     <main>
@@ -102,12 +104,13 @@ const Home = ({ choice, id, setId, searchItem, page, setPage }) => {
             breakLabel={"..."}
             breakClassName={"break-me"}
             pageCount={pageMax}
-            marginPagesDisplayed={1}
-            pageRangeDisplayed={5}
+            marginPagesDisplayed={3}
+            pageRangeDisplayed={3}
             onPageChange={handlePageClick}
             containerClassName={"pagination"}
             subContainerClassName={"pages"}
             activeClassName={"active"}
+            forcePage={page - 1}
           />
         </div>
       </div>

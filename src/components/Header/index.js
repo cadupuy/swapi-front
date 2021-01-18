@@ -43,8 +43,13 @@ const Header = ({
             setChoice={setChoice}
             setId={setId}
             setPage={setPage}
+            setSearchItem={setSearchItem}
           />
-          <SearchInput searchItem={searchItem} setSearchItem={setSearchItem} />
+          <SearchInput
+            searchItem={searchItem}
+            setSearchItem={setSearchItem}
+            setPage={setPage}
+          />
         </div>
 
         {token ? (

@@ -43,6 +43,7 @@ select {
   line-height: 1.375;
   background: transparent;
   border: 1px solid white;
+
   cursor: pointer;
   display: flex;
   font-weight: 700;

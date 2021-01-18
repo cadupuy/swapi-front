@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Cookies from "js-cookie";
-
 import "./App.css";
 
 // Containers
@@ -43,12 +42,6 @@ function App() {
       setToken(null);
     }
   };
-
-  if (isModal || isModalSignUp) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
 
   return (
     <Router>

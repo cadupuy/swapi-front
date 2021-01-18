@@ -9,7 +9,7 @@ main .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 55%;
+  width: 910px;
 }
 
 main .container > div:first-child {
@@ -35,7 +35,7 @@ main::before {
   left: -150px;
   width: 650px;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 }
 
 main::after {
@@ -48,7 +48,7 @@ main::after {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 }
 main .container .leftButton {
   background-color: #00dfd6;
@@ -74,33 +74,36 @@ main .container .leftButton {
   left: 0;
   outline: none;
   font-size: 24px;
+  z-index: 10;
 }
 
 main .container .rightButton {
-  background-color: #00dfd6;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#009bae),
-    to(#00dfd6)
-  );
-  background-image: -o-linear-gradient(left, #009bae 0%, #00dfd6 100%);
   background-image: linear-gradient(90deg, #009bae 0%, #00dfd6 100%);
   border: none;
   border-radius: 100%;
   cursor: pointer;
   height: 4rem;
   font-size: 24px;
-
   overflow: hidden;
   padding: 1rem;
   pointer-events: all;
   position: absolute;
   right: 0;
   width: 4rem;
-  z-index: 10;
   outline: none;
+}
+
+main .container .leftButton svg,
+main .container .rightButton svg {
+  transition: 0.3s all ease;
+}
+
+main .container .leftButton:hover svg {
+  transform: translate(-10px, 1px);
+}
+
+main .container .rightButton:hover svg {
+  transform: translate(10px, -1px);
 }
 
 /* PAGINATION */
@@ -122,4 +125,5 @@ main .container .rightButton {
 
 .active {
   font-weight: bold;
+  color: #fded22;
 }
